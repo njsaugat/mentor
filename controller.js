@@ -4,6 +4,7 @@ const prisma = new PrismaClient();
 
 exports.postLogin = async (req, res) => {
   let { userId, username, password } = req.body;
+  console.log(userId);
 };
 
 exports.postCash = async (req, res) => {
