@@ -2,7 +2,9 @@ const { PrismaClient } = require('@prisma/client');
 
 const prisma = new PrismaClient();
 
-exports.postLogin = async (req, res) => {};
+exports.postLogin = async (req, res) => {
+  let { userId, username, password } = req.body;
+};
 
 exports.postCash = async (req, res) => {
   const { cashAmount } = req.body;
