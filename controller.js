@@ -2,14 +2,7 @@ const { PrismaClient } = require('@prisma/client');
 
 const prisma = new PrismaClient();
 
-exports.postLogin = async (req, res) => {
-  const { username, password } = req.body;
-  const user = await prisma.user.find({ username: username });
-  if (password === user.password) {
-    //verifying the credentials
-    req.session = username;
-  }
-};
+exports.postLogin = async (req, res) => {};
 
 exports.postCash = async (req, res) => {
   const { cashAmount } = req.body;
